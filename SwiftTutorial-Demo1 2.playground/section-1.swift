@@ -60,4 +60,13 @@ firstItem = shoppingList[0]
 shoppingList[4...6]  = ["Banana","Apple"]
 //shoppingList now contains 6 items
 shoppingList
-var str2 = "Prince"
+let array:Array<Int> = [1,2,3,4]
+let dictionary: Dictionary<String,Int> =["dog":1,"elephant":2]
+var airport :[String:String] = ["TYO":"Tokyo","DUB":"Dublin"]
+if airport.isEmpty{
+    println("The Airport dictionary is Empty.")
+}
+else{
+    println("The Airport dictionary is Not Empty.")
+}
+println("The Airport dictionary contains\(airport.count) items.")
