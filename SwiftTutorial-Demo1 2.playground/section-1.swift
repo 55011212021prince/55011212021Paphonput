@@ -60,9 +60,12 @@ firstItem = shoppingList[0]
 shoppingList[4...6]  = ["Banana","Apple"]
 //shoppingList now contains 6 items
 shoppingList
+
+
 let array:Array<Int> = [1,2,3,4]
-let dictionary: Dictionary<String,Int> =["dog":1,"elephant":2]
-var airport :[String:String] = ["TYO":"Tokyo","DUB":"Dublin"]
+let dictionary: Dictionary<String,Int> = ["dog":1,"elephant":2]
+
+var airport : [String:String] = ["TYO":"Tokyo","DUB":"Dublin"]
 if airport.isEmpty{
     println("The Airport dictionary is Empty.")
 }
@@ -70,3 +73,19 @@ else{
     println("The Airport dictionary is Not Empty.")
 }
 println("The Airport dictionary contains\(airport.count) items.")
+
+airport["LHR"] = "LONDON"
+airport["LHR"]
+airport["LHR"] = "LONDON 555"
+
+airport["LHR"] = nil
+
+airport["APL"] = "Apple International"
+airport["APL"] = nil
+
+if let removedValue = airport.removeValueForKey("DUB"){
+        println("The remove airport's name is\(removedValue).")
+} else {
+        println("The airport dictionary dose not contain a value for DUB.")
+}
+
