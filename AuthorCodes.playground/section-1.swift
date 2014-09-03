@@ -28,7 +28,7 @@ class testcode{
     }
     func factorial(n:Int)->Int{
         for(var i = 0;i<n;i++){
-            result += facProcess(n)
+            result += facProcess(i)
             println("\(result)")
         }
         return result
