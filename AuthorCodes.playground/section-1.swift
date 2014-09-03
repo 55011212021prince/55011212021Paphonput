@@ -42,3 +42,4 @@ let value = testcode(n:10)
 var boo=value.searchNumber()
 value.PrintResult(boo)
 value.factorial(10)
+
