@@ -34,7 +34,7 @@ class testcode{
         return result
     }
     func facProcess(n:Int)->Int{
-        return result*n
+        return 1*result
     }
 }
 
