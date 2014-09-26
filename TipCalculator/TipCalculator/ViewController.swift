@@ -8,12 +8,14 @@
 
 import UIKit
 
-class ViewController:UIViewController {
+class ViewController:UIViewController,UITableViewDelegate{
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
     @IBOutlet var resultsTextView: UITextView!
-    let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.6)
+    let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
+    var possibleTips = Dictionary<Int,(tipAmt:Double,total:Double)>()
+    var sortedKeys:[Int] = []
     
     func refeshUI(){
         //1
@@ -53,9 +55,7 @@ class ViewController:UIViewController {
     
     @IBAction func taxPercentageChanged(sender : AnyObject){
         tipCalc.taxPct = Double(taxPctSlider.value) / 100.0
-        
-        
-      
+
         refeshUI()
 
     }
