@@ -48,13 +48,14 @@
                                     <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="egy-pa-7pI"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="....." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJS-59-FIg">
-                                <rect key="frame" x="33" y="298" width="303" height="160"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JkF-bD-9K0">
+                                <rect key="frame" x="76" y="264" width="244" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" red="0.56399475452544323" green="0.66666666666666663" blue="0.4440025858350059" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="heA-Kg-nML"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="ICe-jd-WzB"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -65,7 +66,7 @@
                     <navigationItem key="navigationItem" id="VNu-eg-g3Q"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="resultsTextView" destination="JJS-59-FIg" id="mgv-2z-Pbp"/>
+                        <outlet property="Tview" destination="JkF-bD-9K0" id="MaV-58-R2U"/>
                         <outlet property="taxPctLabel" destination="PRO-Za-cwK" id="JK2-sD-Sol"/>
                         <outlet property="taxPctSlider" destination="y5B-dd-Hmt" id="0EY-FR-7rf"/>
                         <outlet property="totalTextField" destination="RzB-Sx-IJ7" id="x8e-1U-8iW"/>

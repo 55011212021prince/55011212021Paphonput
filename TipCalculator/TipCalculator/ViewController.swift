@@ -8,11 +8,12 @@
 
 import UIKit
 
-class ViewController:UIViewController,UITableViewDelegate{
+class ViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
     @IBOutlet var resultsTextView: UITextView!
+    @IBOutlet var Tview: UITableView!
     let tipCalc = TipCalculatorModel(total: 33.25, taxPct: 0.06)
     var possibleTips = Dictionary<Int,(tipAmt:Double,total:Double)>()
     var sortedKeys:[Int] = []
@@ -42,15 +43,17 @@ class ViewController:UIViewController,UITableViewDelegate{
         //1
         tipCalc.total = Double((totalTextField.text as NSString).doubleValue)
         //2
-        let possibleTips =  tipCalc.returnPossibleTips()
-        var result = ""
+        possibleTips =  tipCalc.returnPossibleTips()
+        sortedKeys = sorted(Array(possibleTips.keys))
+        Tview.reloadData()
+       /* var result = ""
         //3
         for (tipPct,tipValue)in possibleTips{
             //4
             result += "\(tipPct)%:\(tipValue)\n"
         }
         //5
-        resultsTextView.text = result
+        //resultsTextView.text = result*/
     }
     
     @IBAction func taxPercentageChanged(sender : AnyObject){
@@ -63,6 +66,22 @@ class ViewController:UIViewController,UITableViewDelegate{
     @IBAction func viewTrapped(sender: AnyObject) {
         totalTextField.resignFirstResponder()
     }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var cell = UITableViewCell (style:UITableViewStyle.Value2, reuseIdentifier: nil)
+        let tipPct = sortedKeys[indexPath.row]
+        let tipAmt = possibleTips[tipPct]!.tipAmt
+        let total = possibleTips.[tipPct]!.total
+        cell.text
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 
+    
+    
+    
 }
 
