@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImageView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="9Ka-6v-Jg6">
+                                <rect key="frame" x="-4" y="0.0" width="4" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iKe-wd-szS">
+                                <rect key="frame" x="104" y="496" width="101" height="30"/>
+                                <state key="normal" title="Save to Album">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="SavePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CgT-RN-9l1"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="x3w-O1-DtT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x3w-O1-DtT" secondAttribute="height" multiplier="8:5" id="OM1-ru-oAb"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ide-vk-wVU">
+                                <rect key="frame" x="402" y="496" width="89" height="30"/>
+                                <state key="normal" title="Photo Album">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6al-Q1-tfN"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ta4-Tf-fhS">
+                                <rect key="frame" x="251" y="424" width="118" height="31"/>
+                                <connections>
+                                    <action selector="amountSliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="nFo-WY-wGr"/>
+                                    <action selector="mouseSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="ZHw-WR-EDq"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="x3w-O1-DtT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="7JX-8a-Iw8"/>
+                            <constraint firstAttribute="centerX" secondItem="x3w-O1-DtT" secondAttribute="centerX" id="Kr2-yg-bfh"/>
+                            <constraint firstAttribute="width" secondItem="x3w-O1-DtT" secondAttribute="width" id="upZ-AN-eJc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="UIImageCiew" destination="x3w-O1-DtT" id="w7M-wW-SPD"/>
+                        <outlet property="amountSlider" destination="Ta4-Tf-fhS" id="AL9-IL-mDh"/>
+                        <outlet property="imageView" destination="x3w-O1-DtT" id="CK1-A1-rtT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="155"/>
+        </scene>
+    </scenes>
+</document>

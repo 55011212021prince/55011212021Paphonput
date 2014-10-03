@@ -52,7 +52,7 @@
                                 <rect key="frame" x="76" y="264" width="244" height="334"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="heA-Kg-nML"/>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="mWr-bv-qKe"/>
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="ICe-jd-WzB"/>
                                 </connections>
                             </tableView>
