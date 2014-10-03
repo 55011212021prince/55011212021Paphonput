@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController:UIViewController,UITableViewDelegate,UITableViewDataSource{
+    
     @IBOutlet var totalTextField : UITextField!
     @IBOutlet var taxPctSlider : UISlider!
     @IBOutlet var taxPctLabel : UILabel!
