@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 protocol ColorTwoViewControllerDelegate{
     func myVCDidFinish(Controller:ColorTwoViewController,text:String)
 }
@@ -26,7 +27,19 @@ class ColorTwoViewController: UIViewController {
     
     @IBAction func colorSelectionButton(sender: UIButton) {
         colorLabel.text = sender.titleLabel!.text!
-      
+        if colorLabel.text == "Green"{
+            view.backgroundColor = UIColor.greenColor()
+            colorLabel.backgroundColor = UIColor.greenColor()
+            colorLabel.textColor = UIColor.whiteColor()
+        }else if colorLabel.text == "Red"{
+            view.backgroundColor = UIColor.redColor()
+            colorLabel.backgroundColor = UIColor.redColor()
+            colorLabel.textColor = UIColor.whiteColor()
+        }else if colorLabel.text == "Blue"{
+            view.backgroundColor = UIColor.blueColor()
+            colorLabel.backgroundColor = UIColor.blueColor()
+            colorLabel.textColor = UIColor.whiteColor()
+        }
         
     }
     override func viewDidLoad() {
