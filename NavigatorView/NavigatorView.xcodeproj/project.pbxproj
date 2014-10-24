@@ -87,11 +87,11 @@
 			children = (
 				3F335E4619F7996900E60ADF /* AppDelegate.swift */,
 				3F335E4819F7996900E60ADF /* ViewController.swift */,
+				3F335E6819F7A0BC00E60ADF /* ColorTwoViewController.swift */,
 				3F335E4A19F7996900E60ADF /* Main.storyboard */,
 				3F335E4D19F7996900E60ADF /* Images.xcassets */,
 				3F335E4F19F7996900E60ADF /* LaunchScreen.xib */,
 				3F335E4419F7996900E60ADF /* Supporting Files */,
-				3F335E6819F7A0BC00E60ADF /* ColorTwoViewController.swift */,
 			);
 			path = NavigatorView;
 			sourceTree = "<group>";
@@ -421,6 +421,7 @@
 				3F335E6219F7996900E60ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3F335E6319F7996900E60ADF /* Build configuration list for PBXNativeTarget "NavigatorViewTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +430,7 @@
 				3F335E6519F7996900E60ADF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

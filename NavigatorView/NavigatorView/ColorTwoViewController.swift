@@ -7,25 +7,33 @@
 //
 
 import UIKit
+protocol ColorTwoViewControllerDelegate{
+    func myVCDidFinish(Controller:ColorTwoViewController,text:String)
+}
 
 class ColorTwoViewController: UIViewController {
 
+    var delegate:ColorTwoViewControllerDelegate? = nil
+    @IBOutlet weak var colorLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    var colorString = ""
+ 
+    @IBAction func save_bt(sender: UIBarButtonItem) {
+        if(delegate != nil){
+            delegate?.myVCDidFinish(self, text: colorLabel!.text!)
+        }
+    }
+    
+    @IBAction func colorSelectionButton(sender: UIButton) {
+        colorLabel.text = sender.titleLabel!.text!
+      
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        colorLabel.text = colorString
+        
     }
 
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
