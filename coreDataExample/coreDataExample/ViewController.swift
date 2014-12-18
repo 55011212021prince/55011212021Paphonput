@@ -76,7 +76,6 @@ class ViewController: UIViewController,UITableViewDataSource{
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         presentViewController(alert, animated: true, completion: nil)
-        
     
     
     }
@@ -87,7 +86,7 @@ class ViewController: UIViewController,UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")  as UITableViewCell
         let item = items[indexPath.row]
-        cell.textLabel.text=item.valueForKey("name") as String?
+        cell.textLabel!.text=item.valueForKey("name") as String?
         
         return cell
     }
